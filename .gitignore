@@ -1,0 +1,5 @@
+*/bin/*
+.vs/
+*/obj/*
+RoboController/GlobalConstant.cs
+RoboControllerBackend/GlobalConstant.cs
