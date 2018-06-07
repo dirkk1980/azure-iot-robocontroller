@@ -9,7 +9,30 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="MessageLabel" Text="Incoming message:" VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center"  FontSize="45"/>
-        <TextBlock x:Name="IncomingMessage" Text="no message" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"  FontSize="45"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button Name="btnIgnitionOn" Margin="5" Background="Green" Foreground="White"  Grid.Row="2" 
+                Click="BtnIgnitionOn_Click">Ignition ON</Button>
+        <Button Name="btnIgnitionOff" Margin="5" Background="Red" Foreground="White" IsEnabled="False" 
+                Grid.Row="2" Grid.Column="1" Click="BtnIgnitionOff_Click">Ignition Off</Button>
+        <Button Name="btnForward" Margin="5" Background="LightBlue" Foreground="DarkBlue" IsEnabled="False" 
+                Grid.Row="3" Click="BtnForward_Click">Forward</Button>
+        <Button Name="btnReverse" Margin="5" Background="Orange" Foreground="OrangeRed" IsEnabled="False" 
+                Grid.Row="3" Grid.Column="1" Click="BtnReverse_Click">Reverse</Button>
+        <Button Name="btnStop" Click="BtnStop_Click" Background="Salmon" Foreground="Sienna" IsEnabled="True"
+                Grid.Row="4" Margin="5">Stop</Button>
+        <TextBlock x:Name="MessageLabel" Text="Incoming message:" VerticalAlignment="Top" HorizontalAlignment="Center" TextAlignment="Center"  FontSize="45" Grid.Column="4" Grid.Row="3"/>
+        <TextBlock x:Name="IncomingMessage" Text="no message" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"  FontSize="30" Grid.Column="4" Grid.Row="4"/>
     </Grid>
 </Page>
